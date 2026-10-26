@@ -6,7 +6,7 @@ Loaded by `design-craft` when building or polishing. Code for every pattern: `re
 
 | Mode | Examples | Motion / 3D budget |
 |---|---|---|
-| **Experience** | portfolio, Relay-style landing, showcase | Full: smooth scroll, scroll-driven scenes, one 3D hero, glass nav, preloader if assets need it |
+| **Experience** | portfolio, product launch landing, showcase | Full: smooth scroll, scroll-driven scenes, one 3D hero, glass nav, preloader if assets need it |
 | **Persuade** | client landing page, gig demo | High but readable: smooth scroll, text reveals, sticky scroll story, 1 signature effect, bento, glass nav/CTA |
 | **Operate** | dashboard, chat app, admin | Low: micro-interactions, view transitions, skeletons. No scroll-jacking, no 3D, glass only on the floating toolbar/modal |
 | **Read** | docs, textbook (Docusaurus) | Minimal: typography, progress bar, subtle reveals. Glass at most on the navbar |

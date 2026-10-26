@@ -156,7 +156,7 @@ Most popular (install counts):
 
 Newest: Liquid Glass Navbar (@gughigug), Mac Style Floating Dock (@themeocean), Holo Vinyl, Web Shot Button, FAQ Drawer, and three preloaders by @kedhareswer (statue, Indian doorway scroll, pixel-art footer). So **liquid glass, dock navs and preloaders are the live trends on the marketplace**.
 
-Practical facts: components install with `npx shadcn@latest add "https://21st.dev/r/<author>/<name>?api_key=$API_KEY_21ST"`; free accounts have a daily install limit; Scroll Expansion Hero needs `next` + `framer-motion`; `https://21st.dev/llms.txt` lists the directory for agents. [V] The pages do not show source, so read the installed code. Per Aceternity/21st licences, components are MIT. Owner already studied 21st.dev for demo-dental (`projects/demo-dental/docs/21st-study.md`).
+Practical facts: components install with `npx shadcn@latest add "https://21st.dev/r/<author>/<name>?api_key=$API_KEY_21ST"`; free accounts have a daily install limit; Scroll Expansion Hero needs `next` + `framer-motion`; `https://21st.dev/llms.txt` lists the directory for agents. [V] The pages do not show source, so read the installed code. Per Aceternity/21st licences, components are MIT.
 
 How to use 21st.dev well: take a component as a starting skeleton, then replace its default fonts, colours and copy, because popular ones (Background Paths, Spotlight Card) are everywhere and read as template if left untouched. Count: ~10k installs of the same scroll hero means visitors have seen it.
 
@@ -181,7 +181,7 @@ How to use 21st.dev well: take a component as a starting skeleton, then replace 
 - So the production recipe is: **layered-CSS glass as the base for all browsers** (blur + saturate + tinted translucent fill + 1 px inner highlight border + soft outer shadow + faint specular gradient), and **SVG refraction as a Chromium-only enhancement behind `@supports`**. Always add a solid-ish fallback and honour `prefers-reduced-transparency` and `prefers-contrast`.
 - For WebGL: a refraction material in Three.js (drei `MeshTransmissionMaterial`) gives true lensing on a 3D object; Codrops has a Sept 2026 WebGPU/TSL liquid-glass grid. [S]
 - Packages exist (e.g. `@real-human/liquid-glass`, with graceful fallback to plain blur) [S]; check licences and size before use.
-- Read Apple's rule as a web rule: glass for the floating layer (nav, dock, toolbar, modal, CTA), flat solid surfaces for content, never glass-on-glass, never full-page glass. This also resolves the clash with `workflow-brief.md` ("no glassmorphism by default"): see the skill's "How it fits" section.
+- Read Apple's rule as a web rule: glass for the floating layer (nav, dock, toolbar, modal, CTA), flat solid surfaces for content, never glass-on-glass, never full-page glass. 
 
 ## 7. Performance and Core Web Vitals
 
@@ -192,11 +192,11 @@ Rules from the sources:
 - Set byte budgets before modelling; Draco/Meshopt geometry, KTX2 textures; instancing; baked lighting.
 - R3F: default DPR is `clamp(devicePixelRatio, 1, 2)`; cap with `dpr={[1, 1.5]}` on mobile; use `frameloop="demand"` and `invalidate()` for scenes that are not constantly animating; put animation in `useFrame`, never your own `requestAnimationFrame`; profile with `r3f-perf`. [S: R3F maintainer on discourse.threejs.org]
 - Animate only `transform` and `opacity` (and `filter`/`clip-path` sparingly). Scroll-driven CSS can run off the main thread. [V: Chrome]
-- Test on a mid-range Android and inside in-app browsers (Instagram, WhatsApp), not just desktop Chrome. This matters for Pakistan-based owner and his clients' mobile traffic.
+- Test on a mid-range Android and inside in-app browsers (Instagram, WhatsApp), not just desktop Chrome. Most small-business traffic is mobile.
 
 ## 8. Typography, colour, layout
 
-- **Fonts**: Geist (Vercel; free, variable, on Google Fonts), Instrument Sans, Hanken Grotesk, Funnel Display/Sans are named as current free picks. [S] Satoshi, General Sans, Clash Grotesk are on Fontshare (free for commercial use [K], verify licence per font). Instrument Serif as a display accent is a very common 2026 choice [K]. Linear itself uses Inter Variable with OpenType alternates (`cv01`, `ss03`), weight 510 for UI text and tighter tracking at display sizes [S]; the point is the detail work, not the font. Note `workflow-brief.md` bans Inter-by-default for the owner's projects: choose a deliberate pairing.
+- **Fonts**: Geist (Vercel; free, variable, on Google Fonts), Instrument Sans, Hanken Grotesk, Funnel Display/Sans are named as current free picks. [S] Satoshi, General Sans, Clash Grotesk are on Fontshare (free for commercial use [K], verify licence per font). Instrument Serif as a display accent is a very common 2026 choice [K]. Linear itself uses Inter Variable with OpenType alternates (`cv01`, `ss03`), weight 510 for UI text and tighter tracking at display sizes [S]; the point is the detail work, not the font. Avoid Inter-by-default: choose a deliberate pairing.
 - **Dark-first palette (Linear style)** [S]: near-black base, hierarchy built from white at stepped opacities, borders at about 5 to 8% white, layered shadows with inset highlights, one chromatic accent (Linear: indigo-violet), status colour only on statuses. Use OKLCH tinted neutrals instead of `#000`/`#fff`, per the brief.
 - **Bento grids**: CSS Grid, biggest tile for the most important content, vary spans, plan the mobile stack; poor fit for long editorial pages. [S]
 - **Kinetic typography**: big type as the hero, headlines that animate on scroll, text that reacts to the cursor; keep it readable and honour reduced motion. [S]
@@ -229,21 +229,20 @@ These are patterns, with values from the existing design skills and the sources 
 ## 11. What designers/devs are sharing on social (public traces only)
 
 Coverage is thin and I will not invent names or posts.
-- A cluster of **Claude Code skills for scroll-driven 3D sites** is circulating (GitHub: zyliu0/3d-frontend, freshtechbro/claudedesignskills, MengTo's "Build Three.js Scroll Worlds" with about 4.6k stars, updated Aug 2026), plus TikTok/YouTube tutorials with the same recipe: plan a cinematic scroll animation, install Three.js + GSAP + ScrollTrigger, drive zoom/scale/scene transitions with scroll, layered images for fake depth, refine until it feels like one continuous scene. [S] This matches the owner's reels (`workflow-brief.md`, @codvyn).
-- Marketing advice seen in the same results: screen-record yourself scrolling the live site and post it, so people see it is real.
-- Specific X/Threads/Instagram accounts and viral effects: **not found via public search**. Next step if wanted: the owner pastes links or screenshots of posts he likes and a session adds them here.
+- A cluster of **Claude Code skills for scroll-driven 3D sites** is circulating (GitHub: zyliu0/3d-frontend, freshtechbro/claudedesignskills, MengTo's "Build Three.js Scroll Worlds" with about 4.6k stars, updated Aug 2026), plus TikTok/YouTube tutorials with the same recipe: plan a cinematic scroll animation, install Three.js + GSAP + ScrollTrigger, drive zoom/scale/scene transitions with scroll, layered images for fake depth, refine until it feels like one continuous scene. [S] - Marketing advice seen in the same results: screen-record yourself scrolling the live site and post it, so people see it is real.
+- Specific X/Threads/Instagram accounts and viral effects: **not found via public search**. Add posts you trust by link.
 
 ## 12. Gaps and how to close them
 
 | Gap | Why | To close |
 |---|---|---|
-| Apple HIG Materials page text | JS-rendered, empty to my fetchers | Owner pastes the page text, or use the WWDC25 transcript (already used) |
+| Apple HIG Materials page text | JS-rendered, empty to my fetchers | Paste the page text, or rely on the WWDC25 transcript (already used) |
 | godly, siteinspire, land-book, One Page Love, Framer/Webflow showcases | Not reachable or no useful result | Open in the browser pane and note 10 sites each (names + what stands out) |
 | Linear/Vercel/Stripe/Apple product page internals | Only third-party write-ups | Inspect live with DevTools in a later session |
 | Lusion/Active Theory engines | No reliable public detail | Do not claim anything about them |
 | Codrops articles | 403 to fetcher | Read in the browser pane when needed |
-| X/Threads/Instagram | Login-gated | Owner shares links |
-| Owner's own research | Coming | Add as a new dated file in `docs/research/` and link it from the skill |
+| X/Threads/Instagram | Login-gated | Share links manually |
+| Your own research | — | Add a dated file in `references/` and link it from `SKILL.md` |
 
 ## 13. Sources
 

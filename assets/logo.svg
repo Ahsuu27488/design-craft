@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="t">
+  <title id="t">design-craft</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#171a24"/>
+      <stop offset="1" stop-color="#0b0d13"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0.85"/>
+      <stop offset="0.45" stop-color="#2dd4bf" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pane" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#99f6e4"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <filter id="frost" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <clipPath id="paneClip"><rect x="164" y="164" width="208" height="208" rx="52" transform="rotate(-10 268 268)"/></clipPath>
+    <clipPath id="tile"><rect width="512" height="512" rx="118"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#tile)">
+    <rect width="512" height="512" fill="url(#bg)"/>
+    <!-- signature light -->
+    <circle cx="312" cy="304" r="190" fill="url(#glow)" filter="url(#soft)"/>
+
+    <!-- back pane: outline only -->
+    <rect x="132" y="112" width="208" height="208" rx="52" fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="6" transform="rotate(-10 236 216)"/>
+
+    <!-- solid core: the accent, sitting under the glass -->
+    <rect x="270" y="270" width="132" height="132" rx="36" fill="url(#core)" transform="rotate(-10 336 336)"/>
+
+    <!-- what the glass sees: the core, blurred and brightened (lensing) -->
+    <g clip-path="url(#paneClip)">
+      <rect x="0" y="0" width="512" height="512" fill="#11141c"/>
+      <circle cx="312" cy="304" r="190" fill="url(#glow)" filter="url(#soft)"/>
+      <rect x="270" y="270" width="132" height="132" rx="36" fill="#5eead4" filter="url(#frost)" transform="rotate(-10 336 336)"/>
+      <rect x="0" y="0" width="512" height="512" fill="#0b0d13" fill-opacity="0.12"/>
+    </g>
+
+    <!-- front glass pane -->
+    <g transform="rotate(-10 268 268)">
+      <rect x="164" y="164" width="208" height="208" rx="52" fill="url(#pane)"/>
+      <rect x="164" y="164" width="208" height="208" rx="52" fill="none" stroke="url(#rim)" stroke-width="5"/>
+      <!-- specular streak -->
+      <path d="M196 206 Q196 196 206 192 L268 176" fill="none" stroke="#ffffff" stroke-opacity="0.85" stroke-width="7" stroke-linecap="round"/>
+    </g>
+
+    <!-- craft spark -->
+    <path d="M392 120 C395 140 402 147 422 150 C402 153 395 160 392 180 C389 160 382 153 362 150 C382 147 389 140 392 120 Z" fill="#ffffff"/>
+    <!-- tile inner edge -->
+    <rect x="1.5" y="1.5" width="509" height="509" rx="117" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="3"/>
+  </g>
+</svg>

@@ -1,10 +1,10 @@
 # Companion skills
 
-design-craft orchestrates these. **Core** ones are installed by `scripts/setup.sh` on first run. **On-demand** ones are installed the moment a task needs them: install, then use, then tell the owner in one line. Never skip a needed companion because it is missing.
+design-craft orchestrates these. **Core** ones are installed by `scripts/setup.sh` on first run. **On-demand** ones are installed the moment a task needs them: install, then use, then tell the user in one line. Never skip a needed companion because it is missing.
 
-All were checked on GitHub on 2026-10-27 (stars, licence, last push). Star counts in social posts are unreliable; these are the API numbers.
+All were checked on GitHub on 2026-10-27 (stars, licence, last push). Stars are GitHub API numbers on that date; social-media star claims are unreliable.
 
-Install tool for plain skills: the `skills` CLI (`npx -y skills add <repo> -s <skill> -g -a claude-code -y --copy`). `-g` = user-wide, `--copy` avoids Windows symlink trouble. Plugins: `claude plugin marketplace add <repo>` then `claude plugin install <plugin>@<marketplace> --scope user` (the CLI works from a shell; in-chat `/plugin` commands are the same thing for the owner).
+Install tool for plain skills: the `skills` CLI (`npx -y skills add <repo> -s <skill> -g -a claude-code -y --copy`). `-g` = user-wide, `--copy` avoids Windows symlink trouble. Plugins: `claude plugin marketplace add <repo>` then `claude plugin install <plugin>@<marketplace> --scope user` (the CLI works from a shell; in-chat `/plugin` commands are the same thing for a person).
 
 ## Core (setup.sh installs these)
 
@@ -27,10 +27,10 @@ Install tool for plain skills: the `skills` CLI (`npx -y skills add <repo> -s <s
 | Janky animation, memory leaks, offscreen loops | `optimize-web-animations` (MengTo/Skills, MIT) | `npx -y skills add MengTo/Skills -s optimize-web-animations -g -a claude-code -y --copy` |
 | Exact polish values (radius, optical alignment, colour, type) | `better-ui`, `better-typography`, `better-colors` (jakubkrehel/skills, MIT) | `npx -y skills add jakubkrehel/skills -s better-ui -s better-typography -s better-colors -g -a claude-code -y --copy` |
 | React View Transitions in Next.js | `react-view-transitions` (vercel-labs/agent-skills) | `npx -y skills add vercel-labs/agent-skills -s react-view-transitions -g -a claude-code -y --copy` |
-| Motion (Framer Motion) current docs + MCP | Motion AI Kit (`motion-ai` npm) | `npx -y motion-ai` (also configures Motion's hosted MCP servers: tell the owner first) |
-| Ready components from 21st.dev | 21st plugin (skill + 21st MCP; free tier ~2 components/day) | `claude plugin marketplace add 21st-dev/claude-code-plugin` then `claude plugin install 21st@21st --scope user` (needs the owner's 21st account key in his env, never in files) |
+| Motion (Framer Motion) current docs + MCP | Motion AI Kit (`motion-ai` npm) | `npx -y motion-ai` (also configures Motion's hosted MCP servers: tell the user first) |
+| Ready components from 21st.dev | 21st plugin (skill + 21st MCP; free tier ~2 components/day) | `claude plugin marketplace add 21st-dev/claude-code-plugin` then `claude plugin install 21st@21st --scope user` (needs your 21st account key in an environment variable, never in files) |
 | "Make it look like <brand>" | awesome-design-md (VoltAgent, MIT, ~124k): DESIGN.md files of Apple, Linear, Stripe, Airbnb... | No install: fetch the brand's DESIGN.md from the repo and use it as a reference, adapted, never copied 1:1 |
-| Editorial flat minimal look | `design-taste-frontend` (Leonxlnx/taste-skill) | **Only when the owner explicitly asks for that look.** `npx -y skills add Leonxlnx/taste-skill -s design-taste-frontend -g -a claude-code -y --copy` |
+| Editorial flat minimal look | `design-taste-frontend` (Leonxlnx/taste-skill) | **Only when the user explicitly asks for that look.** `npx -y skills add Leonxlnx/taste-skill -s design-taste-frontend -g -a claude-code -y --copy` |
 
 ## Checked and not used (and why)
 

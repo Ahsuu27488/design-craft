@@ -1,14 +1,14 @@
 ---
 name: design-craft
-description: Muhammad Ahsan's design system for everything he builds. Use it whenever you create, design, redesign, restyle, polish or review ANY user interface in any project: websites, landing pages, portfolios, demos, web apps, dashboards, chatbot/chat windows, login and signup screens, forms, buttons, settings, docs sites, tools, extensions, or when he says "design", "polish this UI/UX", "make it look good/premium/modern/2026", "make it look like X", or a page looks generic, AI-made, flat or old. Covers direction, responsive layout (mandatory on every screen), typography, colour, components, motion, smooth scroll, scroll effects, tasteful 3D, Apple Liquid Glass, accessibility and performance, and orchestrates the companion skills (frontend-design, emil-design-eng, apple-design, ui-ux-pro-max, web-design-guidelines, impeccable, GSAP/Three.js skills), installing any that are missing.
+description: A complete design system for Claude Code. Use it whenever you create, design, redesign, restyle, polish or review ANY user interface in any project: websites, landing pages, portfolios, demos, web apps, dashboards, chatbot/chat windows, login and signup screens, forms, buttons, settings, docs sites, tools, extensions, or when the user says "design", "polish this UI/UX", "make it look good/premium/modern/2026", "make it look like X", or a page looks generic, AI-made, flat or old. Covers direction, responsive layout (mandatory on every screen), typography, colour, components, motion, smooth scroll, scroll effects, tasteful 3D, Apple Liquid Glass, accessibility and performance, and orchestrates the companion skills (frontend-design, emil-design-eng, apple-design, ui-ux-pro-max, web-design-guidelines, impeccable, GSAP/Three.js skills), installing any that are missing.
 ---
 
 # design-craft
 
-The owner should never have to explain "make it modern" again. This skill knows what he likes, what a 2026-level interface looks like, and which companion skill to call for each part. Follow it end to end; do not stop at the landing page.
+Nobody should have to explain "make it modern" again. This skill knows the user's taste (`taste-profile.md`), what a 2026-level interface looks like, and which companion skill to call for each part. Follow it end to end; do not stop at the landing page.
 
 Files next to this one (read only what the step needs):
-- `taste-profile.md`: what the owner likes and dislikes. **Read first, every time.**
+- `taste-profile.md`: what the user likes and dislikes (ships with the author's taste; edit it to yours). **Read first, every time.**
 - `surfaces.md`: rules per screen type (landing, chat window, auth, forms, buttons, app/dashboard, docs) and the **mandatory responsive rules**.
 - `references/craft.md`: techniques, defaults, which library for which effect, 3D, Liquid Glass, performance and accessibility budgets.
 - `references/recipes.md`: copy-paste code.
@@ -18,9 +18,9 @@ Files next to this one (read only what the step needs):
 ## Step 0: setup (first run on a machine, and whenever a companion is missing)
 
 1. If `~/.claude/design-craft/setup-v1.done` does not exist, run the setup script once:
-   `bash "${CLAUDE_PLUGIN_ROOT}/scripts/setup.sh"` (on Windows this runs in Git Bash). It installs the core companions globally and writes the marker. Tell the owner in one line what it installed.
-2. During any task, if you need a companion that is not installed (for example GSAP skills for a pinned scroll story, Three.js skills for a 3D hero), **install it, then use it**. Never skip a needed companion because it is missing, and never fall back to guessing. Commands are in `companions.md`. Afterwards say in one line what you installed.
-3. If an install fails (no network, needs a slash command), continue with this skill's own references and tell the owner the exact one-line command to run.
+   `bash "${CLAUDE_PLUGIN_ROOT}/scripts/setup.sh"`. If that variable is empty, the script is two folders up from this file: `<this skill's directory>/../../scripts/setup.sh`. On Windows it runs in Git Bash. It installs the core companions globally and writes the marker. Tell the user in one line what it installed.
+2. During any task, if you need a companion that is not installed (for example GSAP skills for a pinned scroll story, Three.js skills for a 3D hero), **install it, then use it**. Never skip a needed companion because it is missing, and never fall back to guessing. Commands are in `companions.md`. Afterwards tell the user in one line what you installed.
+3. If an install fails (no network, needs a slash command), continue with this skill's own references and tell the user the exact one-line command to run.
 
 ## Step 1: understand the project
 
@@ -33,7 +33,7 @@ Files next to this one (read only what the step needs):
 
 - Audit each surface against `taste-profile.md`, `surfaces.md` and the checklist below. For a quick systematic pass also run `web-design-guidelines` on the main files.
 - Write a short plan: the one-sentence direction (who it is for, the feeling, the **one signature idea**), the token decisions (type pairing, palette, radius, spacing, motion tokens), and per surface the top fixes. Use `frontend-design` for the direction and `ui-ux-pro-max` to search palettes and font pairings for the product type (treat its results as suggestions, not orders).
-- Show the plan to the owner and wait for approval before large changes. Small polish can go straight ahead.
+- Show the plan to the user and wait for approval before large changes. Small polish can go straight ahead.
 
 ## Step 3: build in passes (screenshot after each pass)
 
@@ -68,7 +68,7 @@ After each pass: screenshots at 375 / 768 / 1440, look at them yourself, fix the
 | Final review with file:line findings | `web-design-guidelines` |
 | Audit, critique, bolder/quieter, design-system docs | `impeccable` |
 | Ready components (hero, nav, chat, bento) | 21st.dev (MCP/plugin) or Aceternity / Magic UI, always restyled |
-| Editorial, flat, minimal art direction | `design-taste-frontend` **only if the owner asks for that look** |
+| Editorial, flat, minimal art direction | `design-taste-frontend` **only if the user asks for that look** |
 
 If two skills disagree: the project brief wins, then `taste-profile.md`, then this file, then the companion.
 

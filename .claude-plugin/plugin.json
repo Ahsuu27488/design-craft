@@ -2,12 +2,26 @@
   "name": "design-craft",
   "displayName": "design-craft",
   "version": "0.1.0",
-  "description": "Muhammad Ahsan's personal design system for Claude Code: 2026-level, responsive, premium UI for every surface (landing pages, chat windows, auth, forms, apps, docs), with smooth scroll, scroll effects, tasteful 3D and Liquid Glass, orchestrating and installing companion design skills.",
+  "description": "Make Claude Code design premium, responsive, 2026-level interfaces for every screen: landing pages, chat windows, auth, forms, dashboards and docs. Smooth scroll, scroll effects, tasteful 3D and Liquid Glass, with companion design skills installed on demand.",
   "author": {
     "name": "Muhammad Ahsan",
     "url": "https://github.com/Ahsuu27488"
   },
   "repository": "https://github.com/Ahsuu27488/design-craft",
   "license": "MIT",
-  "keywords": ["design", "ui", "ux", "responsive", "motion", "liquid-glass", "threejs", "gsap", "lenis"]
+  "keywords": [
+    "design",
+    "ui",
+    "ux",
+    "responsive",
+    "motion",
+    "liquid-glass",
+    "threejs",
+    "gsap",
+    "lenis"
+  ],
+  "homepage": "https://github.com/Ahsuu27488/design-craft",
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://github.com/Ahsuu27488/design-craft#readme",
+  "supportUrl": "https://github.com/Ahsuu27488/design-craft/issues"
 }
