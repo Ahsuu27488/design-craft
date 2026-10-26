@@ -1,0 +1,15 @@
+{
+  "name": "design-craft",
+  "description": "Muhammad Ahsan's personal design skill for Claude Code.",
+  "owner": {
+    "name": "Muhammad Ahsan",
+    "url": "https://github.com/Ahsuu27488"
+  },
+  "plugins": [
+    {
+      "name": "design-craft",
+      "source": "./",
+      "description": "Responsive, 2026-level UI polish for every surface, with companion design skills installed on demand."
+    }
+  ]
+}
